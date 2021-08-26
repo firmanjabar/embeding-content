@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Embed Packet Tracer</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+</head>
+<body>
+	<nav class="navbar navbar-dark bg-dark">
+	  <div class="container-fluid container" style="display: flex; justify-content: center">
+	    <a class="navbar-brand" href="#">
+	      <img src="https://forge.kmi.open.ac.uk/onl2-pt1.2/static/images/PTAnywhere-logo.png" alt="" height="24" class="d-inline-block align-text-top">
+	      | PacketTracer Anywhere
+	    </a>
+	  </div>
+	</nav>
+
+	<div class="container">
+		<h1 class="my-3">Packet Tracer Anywhere</h1>
+	  	<p>As part of your work in this course, you will be building networks in a simulator called Packet Tracer Anywhere. This part introduces you to the simulator.</p>
+		<p>There are two short videos to watch followed by an activity. When you’ve completed this part you should be able to use the ipconfig and ping commands in Packet Tracer Anywhere.</p>
+		<p>Watch the video below, which is about 2 minutes long. It introduces you to Packet Tracer Anywhere.</p>
+
+		<strong>Introduction to Packet Tracer Anywhere – What is it?</strong>
+		<div>
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/Xk1yY8Lw4FA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		</div>
+
+		<p>Having seen how Packet Tracer Anywhere looks in a browser now watch the video below, which is about 4.5 minutes long. It shows you the basics of using Packet Tracer Anywhere.</p>
+
+		<strong>
+			Introduction to Packet Tracer Anywhere – How to use it
+		</strong>
+		<div>
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/gn1pVp4ZAlc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		</div>
+
+		<div class="card mb-5 mt-3">
+		  <div class="card-header">
+		    Try It Out!
+		  </div>
+		  <div class="card-body">
+		    <h5 class="card-title">5 minutes</h5>
+		    <p class="card-text">One of the PCs on this PT Anywhere network is not working properly. From PC0, send a ping to its network broadcast address and use the reply to find out which of PC1 and PC2 is malfunctioning. (Hint: First you will need to discover PC0’s IP address to work out what the network broadcast address is. When you send a ping to the network’s broadcast address, the reply from the address ending with ‘.1’ is from the router.)</p>
+		    <iframe src="https://forge.kmi.open.ac.uk/onl2-pt1.2/app/default.html" width="100%" height="600px"></iframe>
+		  </div>
+		  <div class="m-3">
+		  	<p>
+			  <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+			    Reveal Answer
+			  </button>
+			</p>
+			<div class="collapse" id="collapseExample">
+			  <div class="card card-body">
+			    The malfunctioning PC is PC2 with an IP address of 192.167.2.150.
+			    <p>
+				To reach this conclusion you need to discover PC0’s IP address by selecting it and then going to ‘Edit device’, then ‘Interfaces’. You should have found that its IP address is 192.168.2.50 and therefore the network broadcast address is 192.168.2.255. The next step was to double-click on PC0 to open the command prompt and enter ping 192.168.2.255. The reply shows that PC0 can only talk to the device with IP address 192.168.2.1 (which is the router, as indicated in the hint to the previous question) and to the PC with IP address 192.168.2.100. It’s easy to discover that 192.168.2.100 is PC1 by checking PC1’s ‘Interfaces’ settings. Therefore it is PC2 that is malfunctioning. This PC has an IP address of 192.167.2.150.
+			    </p>
+			  </div>
+			</div>
+		  </div>
+		</div>
+	</div>
+
+</body>
+</html>
